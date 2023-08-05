@@ -19,7 +19,6 @@ const Dashboard = () => {
   const [searchText, setSearchText] = useState("");
   const [selectedOrderDetails, setSelectedOrderDetails] = useState({});
   const [selectedOrderTimeStamps, setSelectedOrderTimeStamps] = useState({});
-  //console.log()
   return (
     <div>
       <div className={styles.header}>
@@ -28,6 +27,10 @@ const Dashboard = () => {
           <Search
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
+            orders = {mockData.results}
+            orderTimeStamp = {timestamps.results}
+            setSelectedOrderDetails={setSelectedOrderDetails} 
+            setSelectedOrderTimeStamps={setSelectedOrderTimeStamps}
           />
           <Dropdown
             options={["GBP", "USD", "JPY", "EUR"]}

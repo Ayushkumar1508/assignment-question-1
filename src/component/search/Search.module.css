@@ -1,0 +1,11 @@
+.search{
+    position: absolute;
+    background-color: rgb(4, 52, 99);
+}
+.search div{
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.search div:hover{
+    background-color: #dddddd57;
+}
