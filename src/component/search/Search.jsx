@@ -10,7 +10,6 @@ const Search = ({ value, onChange, orders,orderTimeStamp, setSelectedOrderDetail
     const time = orderTimeStamp.filter(order => order["&id"] === searchClick);
     data[0] && setSelectedOrderDetails(data[0].executionDetails)
     time[0] && setSelectedOrderTimeStamps(time[0].timestamps);
-    console.log(data)
   },[searchClick,orders, orderTimeStamp,setSelectedOrderDetails,setSelectedOrderTimeStamps])
 
   useEffect(()=>{
