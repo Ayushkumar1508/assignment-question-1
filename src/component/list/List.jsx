@@ -24,7 +24,7 @@ const List = ({ rows, timestamps }) => {
             <ListRowCell>{row["&id"]}</ListRowCell>
             <ListRowCell>{row.executionDetails.buySellIndicator}</ListRowCell>
             <ListRowCell>{row.executionDetails.orderStatus}</ListRowCell>
-            <ListRowCell>{timestamps[index].timestamps.orderSubmitted}</ListRowCell>
+            <ListRowCell>{new Date(timestamps[index].timestamps.orderSubmitted).toDateString()}</ListRowCell>
             <ListRowCell>{row.bestExecutionData.orderVolume.USD}</ListRowCell>
           </ListRow>
         ))}
