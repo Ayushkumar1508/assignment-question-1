@@ -10,11 +10,12 @@ const Search = ({ value, onChange, orders,orderTimeStamp, setSelectedOrderDetail
     const time = orderTimeStamp.filter(order => order["&id"] === searchClick);
     data[0] && setSelectedOrderDetails(data[0].executionDetails)
     time[0] && setSelectedOrderTimeStamps(time[0].timestamps);
-  },[searchClick])
+    console.log(data)
+  },[searchClick,orders, orderTimeStamp,setSelectedOrderDetails,setSelectedOrderTimeStamps])
 
   useEffect(()=>{
     setFiltereOrders(orders.filter(order => order["&id"].toUpperCase().includes(value.toUpperCase()) && value.length));
-  },[value])
+  },[value,orders])
 
   return (
   <div>
