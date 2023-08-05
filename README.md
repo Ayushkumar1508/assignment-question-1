@@ -1,4 +1,4 @@
-# Instructionssssssssssss
+# Instructions
 
 - clone this repo and open with your favorite code editor
 
