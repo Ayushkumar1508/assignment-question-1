@@ -1,5 +1,5 @@
-const Search = ({ searchText, onChange }) => {
-  return <input type="text" value={searchText} onChange={onChange} />
+const Search = ({ value, onChange }) => {
+  return <input type="text" value={value} onChange={onChange} />
 }
 
 export default Search

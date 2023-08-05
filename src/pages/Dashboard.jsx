@@ -19,7 +19,7 @@ const Dashboard = () => {
   const [searchText, setSearchText] = useState("");
   const [selectedOrderDetails, setSelectedOrderDetails] = useState({});
   const [selectedOrderTimeStamps, setSelectedOrderTimeStamps] = useState({});
-
+  //console.log()
   return (
     <div>
       <div className={styles.header}>
@@ -47,7 +47,7 @@ const Dashboard = () => {
             title="Selected Order Timestamps"
           />
         </div>
-        <List rows={mockData.results} timestamps={timestamps.results}/>
+        <List rows={mockData.results} timestamps={timestamps.results} currency={currency} setSelectedOrderDetails={setSelectedOrderDetails} setSelectedOrderTimeStamps={setSelectedOrderTimeStamps}/>
       </div>
     </div>
   );
